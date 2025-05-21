@@ -18,16 +18,18 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-age = 25
-message = "You are " + age
+name = "Alice"
+age = 30
+print("Name: " + name + ", Age: " + age)
 ------------------
 
 
 [31m---------------------------------------------------------------------------[39m
 [31mTypeError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 2[39m
-[32m      1[39m age = [32m25[39m
-[32m----> [39m[32m2[39m message = [33;43m"[39;49m[33;43mYou are [39;49m[33;43m"[39;49m[43m [49m[43m+[49m[43m [49m[43mage[49m
+[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 3[39m
+[32m      1[39m name = [33m"[39m[33mAlice[39m[33m"[39m
+[32m      2[39m age = [32m30[39m
+[32m----> [39m[32m3[39m [38;5;28mprint[39m([33;43m"[39;49m[33;43mName: [39;49m[33;43m"[39;49m[43m [49m[43m+[49m[43m [49m[43mname[49m[43m [49m[43m+[49m[43m [49m[33;43m"[39;49m[33;43m, Age: [39;49m[33;43m"[39;49m[43m [49m[43m+[49m[43m [49m[43mage[49m)
 
 [31mTypeError[39m: can only concatenate str (not "int") to str
 
