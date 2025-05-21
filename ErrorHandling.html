@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -445,6 +445,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-errors">Common errors</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typeerror">TypeError</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntaxerror">SyntaxError</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logicerror">LogicError</a></li>
 </ul>
 </li>
 </ul>
@@ -535,6 +536,41 @@ document.write(`
 <p>Explanation:</p>
 <p>This is a SyntaxError, which means the structure of the code violates Python’s grammar rules. In this case, the colon <code class="docutils literal notranslate"><span class="pre">:</span></code> is missing at the end of the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement. Python relies on this colon to recognize that a block of code is starting, so leaving it out causes a syntax failure before the code can even run.</p>
 </section>
+<section id="logicerror">
+<h3>LogicError<a class="headerlink" href="#logicerror" title="Link to this heading">#</a></h3>
+<p>Example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">average</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">num</span>
+    <span class="k">return</span> <span class="n">total</span>  
+
+<span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">70</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">average</span><span class="p">(</span><span class="n">scores</span><span class="p">))</span>  <span class="c1"># Output: 240</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>try to fix this error.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip!</p>
+<p>Hint: what is the expected output?</p>
+</div>
+<p>Solution:</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="k">return</span> <span class="n">total</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>Explanation:</p>
+<p>This is a logic error because the function technically runs without any crash or syntax complaint, but it gives the wrong result. The programmer forgot to divide the total by the number of elements to compute the average. Instead, the function just returns the sum of the numbers. Errors like this are especially tricky because there’s no error message — just incorrect behavior.</p>
+</section>
 </section>
 </section>
 
@@ -596,6 +632,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-errors">Common errors</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typeerror">TypeError</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntaxerror">SyntaxError</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logicerror">LogicError</a></li>
 </ul>
 </li>
 </ul>
