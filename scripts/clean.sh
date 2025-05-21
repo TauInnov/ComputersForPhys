@@ -10,4 +10,4 @@ fi
 # Clean the Jupyter Book
 echo "Cleaning Jupyter Book..."
 cd ../../
-jupyter-book clean NewCourse
+jupyter-book clean ComputersForPhys

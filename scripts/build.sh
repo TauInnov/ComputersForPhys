@@ -10,7 +10,7 @@ fi
 # Build the Jupyter Book
 echo "Building Jupyter Book..."
 cd ../../
-jupyter-book build NewCourse
+jupyter-book build ComputersForPhys
 
 # Check if the build was successful
 if [ $? -eq 0 ]; then
