@@ -5,3 +5,8 @@ format: jb-book
 root: Welcome
 chapters:
 - file: ErrorHandling.ipynb
+  title: Error Handling
+- file: Funcloops.ipynb
+  title: Functions, loops, and conditionals
+- file: libs.ipynb
+  title: Libraries
